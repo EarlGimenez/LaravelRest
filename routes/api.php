@@ -10,4 +10,7 @@ Route::get('/user', function (Request $request) {
 
 
 Route::get('student', [StudentController::class,'index']);
+Route::get('student/{id}', [StudentController::class,'getStudent']);
 Route::post('student', [StudentController::class,'addStudent']);
+Route::put('student/edit/{id}', [StudentController::class,'updateStudent']);
+Route::delete('student/delete/{id}', [StudentController::class, 'deleteStudent']);
